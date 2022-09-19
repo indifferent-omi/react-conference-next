@@ -19,7 +19,7 @@ const SheduleDetailsTab = ({data}) =>{
         </div>
         <div className="pt-2 px-12 w-3/4">
           <div className='bg-water px-8 py-8 rounded-sm'>
-            {navKey === 0 && <OrganiserContent data={data.organizers} />}
+            {navKey === 0 && <OrganiserContent data={data.organizer} />}
             {navKey === 1 && <SpeakerContent data={data.speakers} />}
             {navKey === 2 && <LocationContent data={data.locations} />}
             {navKey === 3 && <ScheduleContent data={data.schedules} />}
