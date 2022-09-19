@@ -12,7 +12,7 @@ export default function ShedulePage({ conference }) {
 
 // Fetch data at build time
 export async function getStaticProps({ params }) {
-  const data = await getScheduleDetails(params.id);
+  const data = (await getScheduleDetails(params.id) || []);
   return {
     props: {
       conference: data,
