@@ -9,7 +9,7 @@ const SheduleDetailsAccordion = ({data}) =>{
   const accordionData = [
     {
       value: "Organizer",
-      content: <OrganiserContent data={data.organizers}/>
+      content: <OrganiserContent data={data.organizer}/>
     },
     {
       value: "Speakers",
