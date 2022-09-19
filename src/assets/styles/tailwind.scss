@@ -1,0 +1,84 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   body{
+    @apply font-body;
+   }
+   h1,h2,h3,h4,h5,h6{
+    @apply font-bold;
+   }
+   h1{
+    @apply text-2xl 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl;
+   }
+   h2{
+    @apply text-sm xl:text-2xl lg:text-xl md:text-md;
+   }
+   h3{
+    @apply text-base;
+   }
+   h4{
+    @apply text-sm;
+   }
+   h5{
+    @apply text-xs
+   }
+   p{
+    @apply text-2xs sm:text-xs lg:text-base leading-2x;
+   }
+}
+@layer components{
+   .btn-w-icon{
+      @apply px-[1.5rem] md:px-[5.125rem] py-[1rem] py-[1.1875rem] bg-primary text-xs text-black inline-flex rounded-full font-medium items-center;
+   }
+   .btn-tab{
+      @apply flex items-center text-black text-base border rounded-[0.5rem] pl-1.5 pt-1.5 pb-1.5 pr-8 cursor-pointer bg-white duration-300;
+      // transition:.4s;
+      svg{
+         @apply mr-[40px];
+         rect,path{
+            @apply duration-300;
+         }
+      }
+      &:hover,&.active{
+         @apply bg-primary text-white;
+         svg{
+            path{
+               // stroke:#fff;
+            }
+            rect{
+               @apply fill-white;
+            }
+         }
+      }
+   }
+}
+
+/*
+// ----------
+ 7xl-  140px -1400 / 
+ 6xl-  120px -1200
+ 5xl-  100px - 992
+4xl-   76px - 768
+ 3xl-  56px - 575
+ 2xl-  48px
+//-------------
+
+2xl -48px -1200
+xl - 40 -992
+lg - 36 - 768
+md- 30 - 575
+sm - 24 
+//-------------
+base -20 - 1200
+xs 18 -- 768
+2xs 16
+//
+--992
+2xs 16
+3xs 14
+//--------------
+4xs- 12
+*/
