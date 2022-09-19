@@ -30,9 +30,9 @@ const Header = () => {
                         <Logo/>
                     </a>
                     <ul className="hidden lg:flex list-none">
-                        {menuItems.map(({label,link})=>{
+                        {menuItems.map(({label,link},index)=>{
                             return(
-                                <li className={listItemStyle}>
+                                <li className={listItemStyle} key={index+label}>
                                     <a href={link} className={listLinkStyle}>{label}</a>
                                 </li>
                             )
