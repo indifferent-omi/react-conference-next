@@ -8,7 +8,7 @@ import SponsorContent from "./SponsorContent";
 const tabNavData = ["Organizer", "Speakers", "Location", "Schedule", "Sponsors"]
 const SheduleDetailsTab = ({data}) =>{
 
-    const [navKey, setNavKey] = useState(0);
+    const [navKey, setNavKey] = useState(1);
     const handleKeyClick = (id) => {
       setNavKey(id)
     }
@@ -19,11 +19,11 @@ const SheduleDetailsTab = ({data}) =>{
         </div>
         <div className="pt-2 px-12 w-3/4">
           <div className='bg-water px-8 py-8 rounded-sm'>
-            {navKey === 0 && <OrganiserContent data={data.organizer} />}
-            {navKey === 1 && <SpeakerContent data={data.speakers} />}
-            {navKey === 2 && <LocationContent data={data.locations} />}
-            {navKey === 3 && <ScheduleContent data={data.schedules} />}
-            {navKey === 4 && <SponsorContent data={data.sponsors} />}
+            {navKey === 1 && <OrganiserContent data={data.organizer} />}
+            {navKey === 2 && <SpeakerContent data={data.speakers} />}
+            {navKey === 3 && <LocationContent data={data.locations} />}
+            {navKey === 4 && <ScheduleContent data={data.schedules} />}
+            {navKey === 5 && <SponsorContent data={data.sponsors} />}
           </div>
         </div>
       </div>
