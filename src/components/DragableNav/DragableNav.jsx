@@ -16,7 +16,7 @@ const SortableItem = SortableElement(({ value,active ,...props}) => (<div {...pr
 const SortableList = SortableContainer(({ list, letters, isDragging,onKeyClick,navKey }) => (
   <div>
     {list.map((value, index) => (
-      <SortableItem key={`list-${index}`} index={index} value={value} onClick={()=> onKeyClick(index)} active={navKey === (index+1)}  />
+      <SortableItem key={`list-${index}`} index={index} value={value} onClick={()=> onKeyClick(index)} active={navKey === index}  />
     ))}
   </div>
 ));
