@@ -30,13 +30,13 @@ const Header = () => {
                         <Logo/>
                     </a>
                     <ul className="hidden lg:flex list-none">
-                        {React.Children.toArray(menuItems.map(({label,link})=>{
+                        {menuItems.map(({label,link})=>{
                             return(
                                 <li className={listItemStyle}>
                                     <a href={link} className={listLinkStyle}>{label}</a>
                                 </li>
                             )
-                        }))}
+                        })}
                     </ul>
                     
                     <a href="#">
