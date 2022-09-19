@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
-import '../assets/styles/tailwind.scss'
 import '../assets/styles/globals.scss'
+import '../assets/styles/tailwind.scss'
 
 function MyApp({ Component, pageProps }) {
   
